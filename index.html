@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam Leaks - Uncopylocked Roblox Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <i class="fas fa-bullhorn"></i>
+            <span id="announcement-text">Welcome to Sam Leaks! Check out our newest additions.</span>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">
+            <h1>Sam Leaks</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active" data-section="home">Home</a></li>
+                <li><a href="#" data-section="hot">Hot</a></li>
+                <li><a href="#" data-section="new">New</a></li>
+                <li><a href="#" data-section="favorites">Favorites</a></li>
+                <li><a href="#" data-section="about">About</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search games...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <button id="submit-game-btn" class="primary-btn">Submit Your Game</button>
+            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <section id="home-section" class="active-section">
+            <div class="section-header" id="recent-section">
+                <h2>Recently Updated</h2>
+                <a href="#" class="view-all" data-section="new">View All</a>
+            </div>
+            <div class="games-grid" id="recent-games"></div>
+
+            <div class="section-header" id="hot-section-home">
+                <h2>Hot & Trending</h2>
+                <a href="#" class="view-all" data-section="hot">View All</a>
+            </div>
+            <div class="games-grid" id="hot-games"></div>
+
+            <div class="section-header" id="popular-section">
+                <h2>Most Downloaded</h2>
+                <a href="#" class="view-all" data-section="hot">View All</a>
+            </div>
+            <div class="games-grid" id="popular-games"></div>
+
+            <div class="section-header" id="free-section">
+                <h2>Free Games</h2>
+                <a href="#" class="view-all" data-section="new">View All</a>
+            </div>
+            <div class="games-grid" id="free-games"></div>
+        </section>
+
+        <!-- Hot Section -->
+        <section id="hot-section" class="section">
+            <div class="section-header">
+                <h2>Hot & Trending Games</h2>
+                <div class="filter-controls">
+                    <select id="hot-sort">
+                        <option value="trending">Trending</option>
+                        <option value="downloads">Most Downloads</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+            </div>
+            <div class="games-grid" id="hot-games-all"></div>
+            <div class="pagination" id="hot-pagination"></div>
+        </section>
+
+        <!-- New Section -->
+        <section id="new-section" class="section">
+            <div class="section-header">
+                <h2>New Games</h2>
+                <div class="filter-controls">
+                    <select id="new-sort">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+                </div>
+            </div>
+            <div class="games-grid" id="new-games-all"></div>
+            <div class="pagination" id="new-pagination"></div>
+        </section>
+
+        <!-- Favorites Section -->
+        <section id="favorites-section" class="section">
+            <div class="section-header">
+                <h2>Your Favorites</h2>
+            </div>
+            <div id="no-favorites" class="hidden">
+                <div class="empty-state">
+                    <i class="fas fa-heart-broken"></i>
+                    <h3>No Favorites Yet</h3>
+                    <p>Click the heart icon on any game to add it to your favorites.</p>
+                </div>
+            </div>
+            <div class="games-grid" id="favorites-games"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about-section" class="section">
+            <div class="about-content">
+                <h2>About Sam Leaks</h2>
+                <p>Sam Leaks is a curated collection of uncopylocked Roblox games. Our mission is to provide a high-quality, easy-to-navigate platform for the Roblox development community.</p>
+
+                <h3>What We Offer</h3>
+                <p>We provide access to a wide variety of uncopylocked Roblox games that you can download, study, and modify for your own projects. Our collection is constantly updated with new content.</p>
+
+                <h3>Join Our Community</h3>
+                <p>Connect with fellow developers and stay updated on the latest additions to our collection by joining our Discord server.</p>
+                <a href="https://discord.gg/JcqDxZGUcf" class="discord-link" target="_blank">
+                    <i class="fab fa-discord"></i> Join our Discord
+                </a>
+
+                <div class="last-updated">
+                    <p>Site last updated: 11/2025</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Results Section -->
+        <section id="search-results-section" class="section">
+            <div class="section-header">
+                <h2>Search Results</h2>
+                <div class="filter-controls">
+                    <select id="search-sort">
+                        <option value="relevance">Relevance</option>
+                        <option value="newest">Newest</option>
+                        <option value="downloads">Most Downloads</option>
+                    </select>
+                </div>
+            </div>
+            <div id="no-results" class="hidden">
+                <div class="empty-state">
+                    <i class="fas fa-search"></i>
+                    <h3>No Results Found</h3>
+                    <p>Try using different search terms or filters.</p>
+                </div>
+            </div>
+            <div class="games-grid" id="search-results"></div>
+            <div class="pagination" id="search-pagination"></div>
+        </section>
+    </main>
+
+    <!-- Game Modal -->
+    <div id="game-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Submit Game Modal -->
+    <div id="submit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Submit Your Game</h2>
+            <form id="submit-form">
+                <div class="form-group">
+                    <label for="game-title">Game Title *</label>
+                    <input type="text" id="game-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="game-description">Description *</label>
+                    <textarea id="game-description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="game-image">Image URL *</label>
+                    <input type="url" id="game-image" required>
+                </div>
+                <div class="form-group">
+                    <label for="game-video">Video URL (optional)</label>
+                    <input type="url" id="game-video">
+                </div>
+                <div class="form-group">
+                    <label for="game-file">Upload .rblx File *</label>
+                    <input type="file" id="game-file" accept=".rblx,.rbxl,.rbxlx" required>
+                    <small>Required: Upload your Roblox game file</small>
+                </div>
+                <button type="submit" class="primary-btn">Submit Game</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close close-success">&times;</span>
+            <div class="success-message">
+                <i class="fas fa-check-circle"></i>
+                <h2>Success!</h2>
+                <p>Your submission has been sent for review!</p>
+                <button class="primary-btn close-success">Got it</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sam Leaks</h3>
+                <p>Premium uncopylocked Roblox games for developers.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Community</h3>
+                <a href="https://discord.gg/JcqDxZGUcf" target="_blank" class="discord-link">
+                    <i class="fab fa-discord"></i> Join our Discord
+                </a>
+            </div>
+            <div class="footer-section">
+                <div class="theme-selector">
+                    <h3>Theme</h3>
+                    <div class="color-options">
+                        <button class="color-option active" data-theme="default"></button>
+                        <button class="color-option" data-theme="blue"></button>
+                        <button class="color-option" data-theme="red"></button>
+                        <button class="color-option" data-theme="green"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sam Leaks | Site last updated: 11/2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
