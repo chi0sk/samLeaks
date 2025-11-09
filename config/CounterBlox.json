@@ -2,7 +2,7 @@
   "id": 1,
   "title": "Counter blox",
   "description": "Take part in a 5v5 team based fire fight across a variety of maps spanning across the globe.\n\nEarn in-match money by eliminating enemies and playing objectives, which you can use to buy new weapons, gear and grenades at the start of each round.",
-  "image": "https://tr.rbxcdn.com/50724d23fb38e68c5c94f3e4ef32bdc8/768/432/Image/Png",
+  "image": "https://tr.rbxcdn.com/180DAY-ed1f6a23c6cfa6e04e9651f4dc8826c5/256/256/Image/Webp/noFilter",
   "images": [
     "https://tr.rbxcdn.com/180DAY-ca5a6c48c0486e9a2d65ca98653af584/768/432/Image/Webp/noFilter",
     "https://tr.rbxcdn.com/180DAY-07dc783f0f3441f1f493fed755e15575/768/432/Image/Webp/noFilter"
@@ -32,4 +32,5 @@
     }
   ]
 }
+
 
