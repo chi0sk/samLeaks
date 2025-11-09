@@ -25,6 +25,11 @@
     {
       "question": "How do I upload the game?",
       "answer": "You will also need to actually PUBLISH the game and turn on API Services in the game settings located on the topbar in Roblox Studio. (You can also search up where this is if you have the new Roblox Studio UI.)"
+    },
+    {
+      "question": "How do i give myself admin",
+      "answer": "its only possible to give yourself ban menu. all code todo with skin granting was removed by the dev team\n\nto give yourself ban menu go to ScreenGui -> Ban -> MainHandler -> ToggleUI and edit the GROUP_ID variable to a group you have perms in\n\n\nthen go to ServerScriptService -> Handler and change the GROUP_ID variable to the same one, you might have to change all the webhooks or just comment out anything to do with webhooks"
     }
   ]
 }
+
