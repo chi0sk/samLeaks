@@ -211,39 +211,35 @@ function setupEventListeners() {
 // Navigation & Section Management
 // =============================================
 function activateSection(sectionId) {
-    sections.forEach(section => {
+    // Hide all sections
+    document.querySelectorAll('main .section, main .active-section').forEach(section => {
         section.classList.remove('active-section');
+        section.style.display = 'none';
     });
 
+    // Show the chosen section
     const activeSection = document.getElementById(`${sectionId}-section`);
     if (activeSection) {
+        activeSection.style.display = 'block';
         activeSection.classList.add('active-section');
-    }
 
-    const homeSections = ['home-section'];
-    homeSections.forEach(id => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.style.display = sectionId === 'home' ? 'flex' : 'none';
-        }
-    });
-
-    const homeGrids = [hotGamesAll];
-    homeGrids.forEach(grid => {
+        // 🪄 Force reflow to fix grid misalignment
+        const grid = activeSection.querySelector('.games-grid');
         if (grid) {
-            grid.style.display = sectionId === 'home' ? 'grid' : 'none';
+            grid.style.display = 'none';
+            // Force reflow
+            void grid.offsetHeight;
+            grid.style.display = 'grid';
         }
+    }
+
+    // Update nav link states
+    document.querySelectorAll('nav a').forEach(link => {
+        link.classList.toggle('active', link.dataset.section === sectionId);
     });
 
-    currentPage = 1;
-
-    if (sectionId === 'hot') {
-        renderGamesList(filterGames('hot'), hotGamesAll, hotPagination);
-    } else if (sectionId === 'new') {
-        renderGamesList(filterGames('new'), newGamesAll, newPagination);
-    } else if (sectionId === 'favorites') {
-        renderFavorites();
-    }
+    // Scroll to top smoothly
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // =============================================
@@ -797,6 +793,7 @@ function setupAnnouncements() {
     }
 
 }
+
 
 
 
