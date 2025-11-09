@@ -18,10 +18,6 @@ const closeSuccessBtn = document.querySelector('.close-success');
 const announcementText = document.getElementById('announcement-text');
 
 // Game grid containers
-const recentGamesGrid = document.getElementById('recent-games');
-const hotGamesGrid = document.getElementById('hot-games');
-const popularGamesGrid = document.getElementById('popular-games');
-const freeGamesGrid = document.getElementById('free-games');
 const hotGamesAll = document.getElementById('hot-games-all');
 const newGamesAll = document.getElementById('new-games-all');
 const favoritesGames = document.getElementById('favorites-games');
@@ -224,7 +220,7 @@ function activateSection(sectionId) {
         activeSection.classList.add('active-section');
     }
 
-    const homeSections = ['free-section'];//['recent-section', 'hot-section-home', 'popular-section', 'free-section'];
+    const homeSections = ['home-section'];
     homeSections.forEach(id => {
         const element = document.getElementById(id);
         if (element) {
@@ -232,7 +228,7 @@ function activateSection(sectionId) {
         }
     });
 
-    const homeGrids = [freeGamesGrid];//[recentGamesGrid, hotGamesGrid, popularGamesGrid, freeGamesGrid];
+    const homeGrids = [hotGamesAll];
     homeGrids.forEach(grid => {
         if (grid) {
             grid.style.display = sectionId === 'home' ? 'grid' : 'none';
@@ -254,42 +250,9 @@ function activateSection(sectionId) {
 // Game Rendering Functions
 // =============================================
 function renderAllGameSections() {
-    renderRecentGames();
-    renderHotGames();
-    renderPopularGames();
-    renderFreeGames();
     renderGamesList(filterGames('hot'), hotGamesAll, hotPagination);
     renderGamesList(filterGames('new'), newGamesAll, newPagination);
     renderFavorites();
-}
-
-function renderRecentGames() {
-    const recentGames = [...games]
-        .sort((a, b) => new Date(b.last_updated) - new Date(a.last_updated))
-        .slice(0, 4);
-    renderGamesGrid(recentGames, recentGamesGrid);
-}
-
-function renderHotGames() {
-    const hotGames = [...games]
-        .sort((a, b) => b.downloads - a.downloads)
-        .slice(0, 4);
-    renderGamesGrid(hotGames, hotGamesGrid);
-}
-
-function renderPopularGames() {
-    const popularGames = [...games]
-        .sort((a, b) => b.downloads - a.downloads)
-        .slice(0, 4);
-    renderGamesGrid(popularGames, popularGamesGrid);
-}
-
-function renderFreeGames() {
-    const freeGames = games
-        .filter(game => game.price === 0)
-        .sort((a, b) => b.downloads - a.downloads)
-        .slice(0, 4);
-    renderGamesGrid(freeGames, freeGamesGrid);
 }
 
 function renderFavorites() {
@@ -834,5 +797,6 @@ function setupAnnouncements() {
     }
 
 }
+
 
 
