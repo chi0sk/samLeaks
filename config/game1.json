@@ -1,18 +1,18 @@
 {
     "id": 1,
-    "title": "Adopt Me Clone",
-    "description": "A fully functional Adopt Me clone with all the features of the original game. Includes pet system, housing, and trading.",
+    "title": "Counter blox",
+    "description": "Take part in a 5v5 team based fire fight across a variety of maps spanning across the globe.\n\nEarn in-match money by eliminating enemies and playing objectives, which you can use to buy new weapons, gear and grenades at the start of each round."
     "image": "https://tr.rbxcdn.com/50724d23fb38e68c5c94f3e4ef32bdc8/768/432/Image/Png",
     "images": [
-        "https://tr.rbxcdn.com/50724d23fb38e68c5c94f3e4ef32bdc8/768/432/Image/Png",
-        "https://tr.rbxcdn.com/1f06a84e95b63718770cf2206f95cbcd/768/432/Image/Png"
+        "https://tr.rbxcdn.com/180DAY-ca5a6c48c0486e9a2d65ca98653af584/768/432/Image/Webp/noFilter",
+        "https://tr.rbxcdn.com/180DAY-07dc783f0f3441f1f493fed755e15575/768/432/Image/Webp/noFilter"
     ],
-    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "video": "",
     "price": 0,
     "download_link": "https://www.linkvertise.com/go/example",
-    "date_added": "2025-10-15",
-    "last_updated": "2025-10-30",
-    "downloads": 3582,
+    "date_added": "09-11-2025",
+    "last_updated": "09-11-2025",
+    "downloads": 0,
     "faq": [
         {
             "question": "Is this the full game?",
@@ -24,3 +24,4 @@
         }
     ]
 }
+
