@@ -232,7 +232,7 @@ function activateSection(sectionId) {
         }
     });
 
-    const homeGrids = [recentGamesGrid, hotGamesGrid, popularGamesGrid, freeGamesGrid];
+    const homeGrids = [freeGamesGrid];//[recentGamesGrid, hotGamesGrid, popularGamesGrid, freeGamesGrid];
     homeGrids.forEach(grid => {
         if (grid) {
             grid.style.display = sectionId === 'home' ? 'grid' : 'none';
@@ -834,4 +834,5 @@ function setupAnnouncements() {
     }
 
 }
+
 
