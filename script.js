@@ -67,16 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
 // Data Fetching
 // =============================================
 function fetchGames() {
-    fetch('config/index.json')
+    fetch('config/index.json?nocache=' + Date.now())
         .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
+            if (!response.ok) throw new Error('Network response was not ok');
             return response.json();
         })
         .then(index => {
             const gamePromises = index.games.map(gameFile =>
-                fetch(`config/${gameFile}`)
+                fetch(`config/${gameFile}?nocache=` + Date.now())
                     .then(response => response.json())
                     .catch(error => {
                         console.error(`Error loading ${gameFile}:`, error);
@@ -834,4 +832,5 @@ function setupAnnouncements() {
             }, 500);
         }, 7000);
     }
+
 }
