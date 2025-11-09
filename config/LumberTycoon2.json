@@ -1,0 +1,31 @@
+{
+    "id": 3,
+    "title": "Lumber tycoon 2",
+    "description": "Welcome to Lumberland! Deforest your surroundings and build your dreams! Check the changelog to keep up with the most recent updates. You can find it in the game menu.",
+    "image": "https://www.roblox.com/games/13822889/Lumber-Tycoon-2?gameSearchSessionInfo=5a079f1a-954a-405c-a515-314e0a802923&isAd=false&nativeAdData=&numberOfLoadedTiles=40&page=searchPage&placeId=13822889&position=0&universeId=2471084",
+    "images": [
+        "https://tr.rbxcdn.com/180DAY-5e7790e45542a50ae0becad8498afec4/768/432/Image/Webp/noFilter",
+        "https://tr.rbxcdn.com/180DAY-1719f8bb69aa427900e695146f685422/768/432/Image/Webp/noFilter",
+        "https://tr.rbxcdn.com/180DAY-5692fe2d49f8bbe7b41e3e0fe1e2eb74/768/432/Image/Webp/noFilter"
+    ],
+    "video": "",
+    "price": 0,
+    "download_link": "https://link-hub.net/471861/asm2E5GaEU7i",
+    "date_added": "09-11-2025",
+    "last_updated": "09-11-2025",
+    "downloads": 0,
+    "faq": [
+        {
+            "question": "Is this the full game?",
+            "answer": "Yes, all scripts and gameplay are present."
+        },
+        {
+            "question": "How do i spoof animations?",
+            "answer": "You will need to animation spoof all animations in game preferably with this spoofer: https://shorturl.at/c4f44"
+        },
+        {
+            "question": "How do i upload the game?",
+            "answer": "PUBLISH the game and turn on API Services in the game settings located on the topbar in roblox studio. if you cant figure this out search google"
+        }
+    ]
+}
