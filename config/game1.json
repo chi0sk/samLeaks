@@ -16,12 +16,17 @@
     "faq": [
         {
             "question": "Is this the full game?",
-            "answer": "Yes, this includes all features from the original Adopt Me game."
+            "answer": "This is a copy of counter blox made by a team of devs to be as close to the original as possible"
         },
         {
-            "question": "Can I monetize this?",
-            "answer": "Yes, you can add your own monetization to this game."
+            "question": "How do i spoof animations",
+            "answer": "-\nYou will need to animation spoof all animations in game preferably with this spoofer: https://shorturl.at/c4f44\n-\nYou will also need to change ALL group ids and webhooks etc.\n-"
+        },
+        {
+            "question": "How do i upload the game",
+            "answer": "You will also need to actually PUBLISH the game and turn on API Services in the game settings located on the topbar in roblox studio. (you can also search up where this is if you have the new roblox studio ui.)"
         }
     ]
 }
+
 
