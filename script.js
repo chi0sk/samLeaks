@@ -224,7 +224,7 @@ function activateSection(sectionId) {
         activeSection.classList.add('active-section');
     }
 
-    const homeSections = ['recent-section', 'hot-section-home', 'popular-section', 'free-section'];
+    const homeSections = ['free-section'];//['recent-section', 'hot-section-home', 'popular-section', 'free-section'];
     homeSections.forEach(id => {
         const element = document.getElementById(id);
         if (element) {
@@ -834,3 +834,4 @@ function setupAnnouncements() {
     }
 
 }
+
