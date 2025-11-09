@@ -1,1 +1,27 @@
-https://link-center.net/471861/nQyRqSqfht9x
+{
+    "id": 0,
+    "title": "Game Title Here",
+    "description": "Detailed description of your game. Explain what features it has and what makes it special.",
+    "image": "https://example.com/main-image.png",
+    "images": [
+        "https://example.com/screenshot1.png",
+        "https://example.com/screenshot2.png",
+        "https://example.com/screenshot3.png"
+    ],
+    "video": "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+    "price": 0,
+    "download_link": "https://link-center.net/471861/nQyRqSqfht9x",
+    "date_added": "2025-11-08",
+    "last_updated": "2025-11-08",
+    "downloads": 0,
+    "faq": [
+        {
+            "question": "Example question?",
+            "answer": "Example answer here."
+        },
+        {
+            "question": "Another question?",
+            "answer": "Another answer here."
+        }
+    ]
+}
