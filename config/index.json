@@ -1,6 +1,8 @@
 {
     "games": [
-        "CounterBlox.json"
+        "CounterBlox.json",
+        "CounterBloxSource2.json"
     ]
 }
+
 
