@@ -28,7 +28,6 @@
         <nav>
             <ul>
                 <li><a href="#" class="active" data-section="home">Home</a></li>
-                <li><a href="#" data-section="hot">Hot</a></li>
                 <li><a href="#" data-section="new">New</a></li>
                 <li><a href="#" data-section="favorites">Favorites</a></li>
                 <li><a href="#" data-section="about">About</a></li>
@@ -48,33 +47,6 @@
     <main>
         <!-- Home Page -->
         <section id="home-section" class="active-section">
-            <div class="section-header" id="recent-section" style="display:none;">
-                <h2>Recently Updated</h2>
-                <a href="#" class="view-all" data-section="new">View All</a>
-            </div>
-            <div class="games-grid" id="recent-games" style="display:none;"></div>
-        
-            <div class="section-header" id="hot-section-home" style="display:none;">
-                <h2>Hot & Trending</h2>
-                <a href="#" class="view-all" data-section="hot">View All</a>
-            </div>
-            <div class="games-grid" id="hot-games" style="display:none;"></div>
-        
-            <div class="section-header" id="popular-section" style="display:none;">
-                <h2>Most Downloaded</h2>
-                <a href="#" class="view-all" data-section="hot">View All</a>
-            </div>
-            <div class="games-grid" id="popular-games" style="display:none;"></div>
-        
-            <div class="section-header" id="free-section">
-                <h2>Free Games</h2>
-                <a href="#" class="view-all" data-section="new">View All</a>
-            </div>
-            <div class="games-grid" id="free-games"></div>
-        </section>
-
-        <!-- Hot Section -->
-        <section id="hot-section" class="section">
             <div class="section-header">
                 <h2>Hot & Trending Games</h2>
                 <div class="filter-controls">
@@ -88,6 +60,23 @@
             <div class="games-grid" id="hot-games-all"></div>
             <div class="pagination" id="hot-pagination"></div>
         </section>
+
+
+        <!-- Hot Section -->
+        <!-- <section id="hot-section" class="section">
+            <div class="section-header">
+                <h2>Hot & Trending Games</h2>
+                <div class="filter-controls">
+                    <select id="hot-sort">
+                        <option value="trending">Trending</option>
+                        <option value="downloads">Most Downloads</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+            </div>
+            <div class="games-grid" id="hot-games-all"></div>
+            <div class="pagination" id="hot-pagination"></div>
+        </section> -->
 
         <!-- New Section -->
         <section id="new-section" class="section">
@@ -251,6 +240,7 @@
 </body>
 
 </html>
+
 
 
 
