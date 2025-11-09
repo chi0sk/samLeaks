@@ -973,6 +973,16 @@ footer {
     animation: spin 1s ease-in-out infinite;
 }
 
+#recent-section,
+#recent-games,
+#hot-section-home,
+#hot-games,
+#popular-section,
+#popular-games {
+    display: none;
+}
+
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
+
