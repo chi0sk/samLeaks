@@ -1,32 +1,30 @@
 {
-    "id": 1,
-    "title": "Counter blox",
-    "description": "Take part in a 5v5 team based fire fight across a variety of maps spanning across the globe.\n\nEarn in-match money by eliminating enemies and playing objectives, which you can use to buy new weapons, gear and grenades at the start of each round."
-    "image": "https://tr.rbxcdn.com/50724d23fb38e68c5c94f3e4ef32bdc8/768/432/Image/Png",
-    "images": [
-        "https://tr.rbxcdn.com/180DAY-ca5a6c48c0486e9a2d65ca98653af584/768/432/Image/Webp/noFilter",
-        "https://tr.rbxcdn.com/180DAY-07dc783f0f3441f1f493fed755e15575/768/432/Image/Webp/noFilter"
-    ],
-    "video": "",
-    "price": 0,
-    "download_link": "https://www.linkvertise.com/go/example",
-    "date_added": "09-11-2025",
-    "last_updated": "09-11-2025",
-    "downloads": 0,
-    "faq": [
-        {
-            "question": "Is this the full game?",
-            "answer": "This is a copy of counter blox made by a team of devs to be as close to the original as possible"
-        },
-        {
-            "question": "How do i spoof animations",
-            "answer": "-\nYou will need to animation spoof all animations in game preferably with this spoofer: https://shorturl.at/c4f44\n-\nYou will also need to change ALL group ids and webhooks etc.\n-"
-        },
-        {
-            "question": "How do i upload the game",
-            "answer": "You will also need to actually PUBLISH the game and turn on API Services in the game settings located on the topbar in roblox studio. (you can also search up where this is if you have the new roblox studio ui.)"
-        }
-    ]
+  "id": 1,
+  "title": "Counter blox",
+  "description": "Take part in a 5v5 team based fire fight across a variety of maps spanning across the globe.\n\nEarn in-match money by eliminating enemies and playing objectives, which you can use to buy new weapons, gear and grenades at the start of each round.",
+  "image": "https://tr.rbxcdn.com/50724d23fb38e68c5c94f3e4ef32bdc8/768/432/Image/Png",
+  "images": [
+    "https://tr.rbxcdn.com/180DAY-ca5a6c48c0486e9a2d65ca98653af584/768/432/Image/Webp/noFilter",
+    "https://tr.rbxcdn.com/180DAY-07dc783f0f3441f1f493fed755e15575/768/432/Image/Webp/noFilter"
+  ],
+  "video": "",
+  "price": 0,
+  "download_link": "https://www.linkvertise.com/go/example",
+  "date_added": "09-11-2025",
+  "last_updated": "09-11-2025",
+  "downloads": 0,
+  "faq": [
+    {
+      "question": "Is this the full game?",
+      "answer": "This is a copy of counter blox made by a team of devs to be as close to the original as possible"
+    },
+    {
+      "question": "How do I spoof animations?",
+      "answer": "-\nYou will need to animation spoof all animations in game preferably with this spoofer: https://shorturl.at/c4f44\n-\nYou will also need to change ALL group IDs and webhooks etc.\n-"
+    },
+    {
+      "question": "How do I upload the game?",
+      "answer": "You will also need to actually PUBLISH the game and turn on API Services in the game settings located on the topbar in Roblox Studio. (You can also search up where this is if you have the new Roblox Studio UI.)"
+    }
+  ]
 }
-
-
