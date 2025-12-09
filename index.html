@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
 </head>
 <body>
     <!-- Announcement Bar -->
@@ -28,9 +28,9 @@
         <nav>
             <ul>
                 <li><a href="#" class="active" data-section="home">Home</a></li>
-                <li><a href="#" data-section="new">New</a></li>
-                <li><a href="#" data-section="favorites">Favorites</a></li>
                 <li><a href="#" data-section="about">About</a></li>
+                <li><a href="#" data-section="leaderboard">Leaderboard</a></li>
+                <li><a href="#" data-section="requests">Requests</a></li>
             </ul>
         </nav>
         <div class="nav-right">
@@ -50,62 +50,25 @@
             <div class="section-header">
                 <h2>Hot & Trending Games</h2>
                 <div class="filter-controls">
-                    <select id="hot-sort">
+                    <input type="date" id="date-from" placeholder="From">
+                    <input type="date" id="date-to" placeholder="To">
+                    <select id="downloads-filter">
+                        <option value="">All Downloads</option>
+                        <option value="1000">1000+</option>
+                        <option value="5000">5000+</option>
+                        <option value="10000">10000+</option>
+                    </select>
+                    <select id="sort-by">
                         <option value="trending">Trending</option>
                         <option value="downloads">Most Downloads</option>
                         <option value="newest">Newest</option>
+                        <option value="rating">Highest Rated</option>
                     </select>
                 </div>
             </div>
-            <div class="games-grid" id="hot-games-all"></div>
-            <div class="pagination" id="hot-pagination"></div>
-        </section>
-
-
-        <!-- Hot Section -->
-        <!-- <section id="hot-section" class="section">
-            <div class="section-header">
-                <h2>Hot & Trending Games</h2>
-                <div class="filter-controls">
-                    <select id="hot-sort">
-                        <option value="trending">Trending</option>
-                        <option value="downloads">Most Downloads</option>
-                        <option value="newest">Newest</option>
-                    </select>
-                </div>
-            </div>
-            <div class="games-grid" id="hot-games-all"></div>
-            <div class="pagination" id="hot-pagination"></div>
-        </section> -->
-
-        <!-- New Section -->
-        <section id="new-section" class="section">
-            <div class="section-header">
-                <h2>New Games</h2>
-                <div class="filter-controls">
-                    <select id="new-sort">
-                        <option value="newest">Newest First</option>
-                        <option value="oldest">Oldest First</option>
-                    </select>
-                </div>
-            </div>
-            <div class="games-grid" id="new-games-all"></div>
-            <div class="pagination" id="new-pagination"></div>
-        </section>
-
-        <!-- Favorites Section -->
-        <section id="favorites-section" class="section">
-            <div class="section-header">
-                <h2>Your Favorites</h2>
-            </div>
-            <div id="no-favorites" class="hidden">
-                <div class="empty-state">
-                    <i class="fas fa-heart-broken"></i>
-                    <h3>No Favorites Yet</h3>
-                    <p>Click the heart icon on any game to add it to your favorites.</p>
-                </div>
-            </div>
-            <div class="games-grid" id="favorites-games"></div>
+            <div class="category-filter" id="category-filter"></div>
+            <div class="games-grid" id="games-grid"></div>
+            <div class="pagination" id="pagination"></div>
         </section>
 
         <!-- About Section -->
@@ -117,6 +80,49 @@
                 <h3>What We Offer</h3>
                 <p>We provide access to a wide variety of uncopylocked Roblox games that you can download, study, and modify for your own projects. Our collection is constantly updated with new content.</p>
 
+                <h3>How to Use Uncopylocked Games</h3>
+                <div class="tutorial-grid">
+                    <div class="tutorial-card">
+                        <h4><i class="fas fa-download"></i> Step 1: Download</h4>
+                        <p>Click on any game card and hit the download button to get the .rblx file.</p>
+                    </div>
+                    <div class="tutorial-card">
+                        <h4><i class="fas fa-folder-open"></i> Step 2: Open in Studio</h4>
+                        <p>Open Roblox Studio and go to File > Open from File, then select your downloaded file.</p>
+                    </div>
+                    <div class="tutorial-card">
+                        <h4><i class="fas fa-edit"></i> Step 3: Customize</h4>
+                        <p>Modify scripts, assets, and gameplay to make the game your own!</p>
+                    </div>
+                    <div class="tutorial-card">
+                        <h4><i class="fas fa-upload"></i> Step 4: Publish</h4>
+                        <p>Once you're done, publish your customized game to Roblox!</p>
+                    </div>
+                </div>
+
+                <h3>Tips for Developers</h3>
+                <div class="tutorial-grid">
+                    <div class="tutorial-card">
+                        <h4><i class="fas fa-code"></i> Learn from Code</h4>
+                        <p>Study the scripts to understand game mechanics and scripting patterns used by other developers.</p>
+                    </div>
+                    <div class="tutorial-card">
+                        <h4><i class="fas fa-lightbulb"></i> Customize & Improve</h4>
+                        <p>Don't just copy - add your own features, fix bugs, and make improvements to create something unique.</p>
+                    </div>
+                    <div class="tutorial-card">
+                        <h4><i class="fas fa-users"></i> Give Credit</h4>
+                        <p>If you use significant portions of code or assets, consider crediting the original creators.</p>
+                    </div>
+                    <div class="tutorial-card">
+                        <h4><i class="fas fa-shield-alt"></i> Test Thoroughly</h4>
+                        <p>Always test uncopylocked games for exploits or backdoors before publishing to ensure player safety.</p>
+                    </div>
+                </div>
+
+                <h3>Keyboard Navigation</h3>
+                <p><strong>Arrow Keys (←/→):</strong> Navigate between games | <strong>Enter:</strong> Open game details | <strong>Esc:</strong> Close modals</p>
+
                 <h3>Join Our Community</h3>
                 <p>Connect with fellow developers and stay updated on the latest additions to our collection by joining our Discord server.</p>
                 <a href="https://discord.gg/JcqDxZGUcf" class="discord-link" target="_blank">
@@ -124,32 +130,49 @@
                 </a>
 
                 <div class="last-updated">
-                    <p>Site last updated: 11/2025</p>
+                    <p>Site last updated: 12/2024</p>
                 </div>
             </div>
         </section>
 
-        <!-- Search Results Section -->
-        <section id="search-results-section" class="section">
+        <!-- Leaderboard Section -->
+        <section id="leaderboard-section" class="section">
             <div class="section-header">
-                <h2>Search Results</h2>
-                <div class="filter-controls">
-                    <select id="search-sort">
-                        <option value="relevance">Relevance</option>
-                        <option value="newest">Newest</option>
-                        <option value="downloads">Most Downloads</option>
-                    </select>
+                <h2>Leaderboards</h2>
+            </div>
+            <div class="download-analytics">
+                <div class="stat-card">
+                    <div class="stat-value" id="total-games">0</div>
+                    <div class="stat-label">Total Games</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="total-downloads">0</div>
+                    <div class="stat-label">Total Downloads</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="avg-rating">0</div>
+                    <div class="stat-label">Average Rating</div>
                 </div>
             </div>
-            <div id="no-results" class="hidden">
-                <div class="empty-state">
-                    <i class="fas fa-search"></i>
-                    <h3>No Results Found</h3>
-                    <p>Try using different search terms or filters.</p>
-                </div>
+            <h3>Most Downloaded Games</h3>
+            <div class="games-grid" id="leaderboard-downloads"></div>
+            <h3 style="margin-top: 40px;">Highest Rated Games</h3>
+            <div class="games-grid" id="leaderboard-rating"></div>
+        </section>
+
+        <!-- Requests Section -->
+        <section id="requests-section" class="section">
+            <div class="section-header">
+                <h2>Game Requests</h2>
             </div>
-            <div class="games-grid" id="search-results"></div>
-            <div class="pagination" id="search-pagination"></div>
+            <div style="max-width: 600px; margin: 0 auto;">
+                <p style="margin-bottom: 20px; color: var(--text-secondary);">Request games you'd like to see added to our collection. Popular requests will be prioritized!</p>
+                <div class="comment-form">
+                    <input type="text" id="request-input" placeholder="Request a game..." maxlength="200">
+                    <button class="primary-btn" onclick="submitRequest()">Submit</button>
+                </div>
+                <div id="requests-list" style="margin-top: 30px;"></div>
+            </div>
         </section>
     </main>
 
@@ -174,6 +197,19 @@
                 <div class="form-group">
                     <label for="game-description">Description *</label>
                     <textarea id="game-description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="game-category">Category *</label>
+                    <select id="game-category" required>
+                        <option value="">Select a category</option>
+                        <option value="Simulator">Simulator</option>
+                        <option value="Obby">Obby</option>
+                        <option value="RPG">RPG</option>
+                        <option value="Tycoon">Tycoon</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Fighting">Fighting</option>
+                        <option value="Other">Other</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="game-image">Image URL *</label>
@@ -232,15 +268,10 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Sam Leaks | Site last updated: 11/2025</p>
+            <p>&copy; 2025 Sam Leaks | Site last updated: 12/2024</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
