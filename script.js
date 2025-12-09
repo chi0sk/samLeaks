@@ -348,24 +348,30 @@ function renderAllSections() {
 }
 
 function renderGames() {
-    const filtered = getFilteredGames();
-    const grid = document.getElementById('games-grid');
-    
-    const start = (state.currentPage - 1) * state.itemsPerPage;
-    const end = start + state.itemsPerPage;
-    const paginated = filtered.slice(start, end);
+    const filtered = getFilteredGames();
+    const grid = document.getElementById('games-grid');
+    
+    // Add this check to prevent the TypeError
+    if (!grid) {
+        console.error("Error: Element with ID 'games-grid' not found.");
+        return;
+    }
 
-    if (paginated.length === 0) {
-        grid.innerHTML = '<div class="empty-state"><i class="fas fa-search"></i><h3>No games found</h3><p>Try adjusting your filters</p></div>';
-    } else {
-        grid.innerHTML = '';
-        paginated.forEach(game => {
-            const card = createGameCard(game);
-            grid.appendChild(card);
-        });
-    }
+    const start = (state.currentPage - 1) * state.itemsPerPage;
+    const end = start + state.itemsPerPage;
+    const paginated = filtered.slice(start, end);
 
-    renderPagination(filtered.length, document.getElementById('pagination'));
+    if (paginated.length === 0) {
+        grid.innerHTML = '<div class="empty-state"><i class="fas fa-search"></i><h3>No games found</h3><p>Try adjusting your filters</p></div>';
+    } else {
+        grid.innerHTML = '';
+        paginated.forEach(game => {
+            const card = createGameCard(game);
+            grid.appendChild(card);
+        });
+    }
+
+    renderPagination(filtered.length, document.getElementById('pagination'));
 }
 
 function createGameCard(game) {
@@ -833,3 +839,4 @@ window.voteRequest = voteRequest;
 window.changePage = changePage;
 window.filterByCategory = filterByCategory;
 window.trackDownload = trackDownload;
+
