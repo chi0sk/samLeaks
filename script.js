@@ -351,12 +351,12 @@ function renderGames() {
     const filtered = getFilteredGames();
     const grid = document.getElementById('games-grid');
     
-    // Add this check to prevent the TypeError
+    // Add this check (or ensure it stays)
     if (!grid) {
-        console.error("Error: Element with ID 'games-grid' not found.");
+        console.error("Error: Element with ID 'games-grid' not found. Cannot render games.");
         return;
     }
-
+    
     const start = (state.currentPage - 1) * state.itemsPerPage;
     const end = start + state.itemsPerPage;
     const paginated = filtered.slice(start, end);
@@ -839,4 +839,5 @@ window.voteRequest = voteRequest;
 window.changePage = changePage;
 window.filterByCategory = filterByCategory;
 window.trackDownload = trackDownload;
+
 
