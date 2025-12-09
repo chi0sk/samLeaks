@@ -615,11 +615,19 @@ function trackDownload(gameId) {
 // Leaderboards
 // =============================================
 function renderLeaderboards() {
+    function renderLeaderboards() {
     if (state.games.length === 0) return;
 
     // Most downloaded
     const byDownloads = [...state.games].sort((a, b) => b.downloads - a.downloads).slice(0, 6);
     const downloadsGrid = document.getElementById('leaderboard-downloads');
+    
+    // Defensive Check 1: Check if downloads grid exists
+    if (!downloadsGrid) {
+        console.error("Error: Element 'leaderboard-downloads' not found.");
+        return;
+    }
+
     downloadsGrid.innerHTML = '';
     byDownloads.forEach(game => {
         downloadsGrid.appendChild(createGameCard(game));
@@ -628,14 +636,25 @@ function renderLeaderboards() {
     // Highest rated
     const byRating = [...state.games].sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 6);
     const ratingGrid = document.getElementById('leaderboard-rating');
+    
+    // Defensive Check 2: Check if rating grid exists
+    if (!ratingGrid) {
+        console.error("Error: Element 'leaderboard-rating' not found.");
+        return;
+    }
+
     ratingGrid.innerHTML = '';
     byRating.forEach(game => {
         ratingGrid.appendChild(createGameCard(game));
     });
 
-    // Stats
-    const totalDownloads = state.games.reduce((sum, g) => sum + g.downloads, 0);
-    const avgRating = state.games.reduce((sum, g) => sum + (g.rating || 0), 0) / state.games.length;
+    // Stats (Ensure these stat elements are present in your HTML as well)
+    const totalGamesEl = document.getElementById('total-games');
+    const totalDownloadsEl = document.getElementById('total-downloads');
+    const avgRatingEl = document.getElementById('avg-rating');
+
+    // Defensive Check 3: Only update stats if elements are found
+    if (totalGamesEl) totalGamesEl.textContent = state.games.length;
     
     document.getElementById('total-games').textContent = state.games.length;
     document.getElementById('total-downloads').textContent = totalDownloads.toLocaleString();
@@ -839,5 +858,6 @@ window.voteRequest = voteRequest;
 window.changePage = changePage;
 window.filterByCategory = filterByCategory;
 window.trackDownload = trackDownload;
+
 
 
